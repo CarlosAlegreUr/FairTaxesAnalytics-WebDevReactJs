@@ -1,0 +1,10 @@
+
+.debt-header {
+    display: flex;
+    margin: 5% 49%;
+    justify-content: left;
+    font-style: italic;
+    color: rgb(199, 25, 25);
+    text-shadow: 1px 1px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
