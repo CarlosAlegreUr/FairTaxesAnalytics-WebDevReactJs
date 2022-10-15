@@ -13,14 +13,14 @@ import CountriesDataMenu from "./components/CountriesDataMenu";
 
 export default function App() {
     return(
-        <div id="app-main">
+        <div class="bg-dark bg-gradient text-white" id="app-main">
             <header class="container-md" id="page-top">
                 <SocialMediaNav/>
                 <FTATitle/>
             </header>
 
             <table class="container-md border" id="middle-div">
-                <tr class="row"> 
+                <tr class="row align-items-center"> 
                     <th class="col">
                         <CountriesDataMenu/>
                         <br/><br/>

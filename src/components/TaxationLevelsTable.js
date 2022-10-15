@@ -2,7 +2,7 @@
 
 export default function TaxationLevelsTable() {
     return(
-        <table class="table" id="taxation-levels-table">
+        <table class="table text-white" id="taxation-levels-table">
             <tr>
                 <th> Nº People </th>
                 <th> Income Range</th>
