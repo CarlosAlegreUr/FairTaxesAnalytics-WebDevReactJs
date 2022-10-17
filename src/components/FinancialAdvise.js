@@ -1,7 +1,5 @@
-
-
 export default function FinancialAdvise() {
-    return(
+    return (
         <section id="financial-advise">
             <heaer> Financial Advise </heaer>
             <h4> Do this </h4>

@@ -1,7 +1,5 @@
-
-
 export default function TaxationLevelsTable() {
-    return(
+    return (
         <table class="table text-white" id="taxation-levels-table">
             <tr>
                 <th> Nº People </th>
