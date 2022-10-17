@@ -1,5 +1,5 @@
 import FTATitle from "./components/FTATitle"
-import Chart from "./components/Chart"
+import BudgetChart from "./components/BudgetChart"
 import FinancialAdvise from "./components/FinancialAdvise"
 import StatParam from "./components/StatParamMenu"
 import SocialMediaNav from "./components/SocialMediaNav"
@@ -25,7 +25,7 @@ export default function App() {
                     </th>
 
                     <th className="col">
-                        <Chart />
+                        <BudgetChart />
                         <br />
                         <br />
                         <StatParam />
