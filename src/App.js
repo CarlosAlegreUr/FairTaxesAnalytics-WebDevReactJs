@@ -6,7 +6,6 @@ import SocialMediaNav from "./components/SocialMediaNav"
 import PageFooter from "./components/PageFooter"
 import AnalyzeButton from "./components/AnalyzeButton"
 import TaxationLevelsTable from "./components/TaxationLevelsTable"
-import AddTaxationLvlForm from "./components/AddTaxationLevelForm"
 import CountriesDataMenu from "./components/CountriesDataMenu"
 
 export default function App() {
@@ -23,9 +22,6 @@ export default function App() {
                         <br />
                         <br />
                         <TaxationLevelsTable />
-                        <br />
-                        <br />
-                        <AddTaxationLvlForm />
                     </th>
 
                     <th className="col">

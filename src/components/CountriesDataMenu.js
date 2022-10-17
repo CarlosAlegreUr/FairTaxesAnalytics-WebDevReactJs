@@ -1,6 +1,13 @@
+async function analyzeCountryData(country) {
+    alert(
+        "ANALYZING DATA FROM " +
+            country +
+            " PLEASE CLOSE THIS ALERT, THIS FUNCTION IS NOT IMPLEMENTED YET"
+    )
+}
 
 export default function CountriesDataMenu() {
-    return(
+    return (
         <div id="countries-data-div">
             Select Real data:
             <select className="form-select" id="countries-data-menu">
@@ -8,7 +15,11 @@ export default function CountriesDataMenu() {
                 <option> Switzerland </option>
                 <option> Other </option>
             </select>
-            <button className="btn btn-danger" id="analyze-country-button">
+            <button
+                onClick={analyzeCountryData}
+                className="btn btn-danger"
+                id="analyze-country-button"
+            >
                 Analyzie Selected Country
             </button>
         </div>
