@@ -4,7 +4,7 @@ export default function AddTaxationLvlForm() {
             Nº of people <input /> <br />
             Income range
             <input /> <br />
-            <button class="btn btn-warning"> ADD TAXATION LEVEL </button>
+            <button className="btn btn-warning"> ADD TAXATION LEVEL </button>
         </form>
     )
 }

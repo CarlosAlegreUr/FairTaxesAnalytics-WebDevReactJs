@@ -1,5 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css"
-
 import FTATitle from "./components/FTATitle"
 import Chart from "./components/Chart"
 import FinancialAdvise from "./components/FinancialAdvise"
@@ -13,14 +11,14 @@ import CountriesDataMenu from "./components/CountriesDataMenu"
 
 export default function App() {
     return (
-        <div class="bg-dark bg-gradient text-white" id="app-main">
-            <header class="container-md" id="page-top">
+        <div className="bg-dark bg-gradient text-white" id="app-main">
+            <header className="container-md" id="page-top">
                 <SocialMediaNav />
                 <FTATitle />
             </header>
-            <table class="container-md border" id="middle-div">
-                <tr class="row align-items-center">
-                    <th class="col">
+            <table className="container-md border" id="middle-div">
+                <tr className="row align-items-center">
+                    <th className="col">
                         <CountriesDataMenu />
                         <br />
                         <br />
@@ -30,7 +28,7 @@ export default function App() {
                         <AddTaxationLvlForm />
                     </th>
 
-                    <th class="col">
+                    <th className="col">
                         <Chart />
                         <br />
                         <br />
@@ -39,13 +37,13 @@ export default function App() {
                 </tr>
             </table>
             <br /> <br />
-            <table class="container-md border" id="bottom-div">
-                <tr class="row">
-                    <th class="col">
+            <table className="container-md border" id="bottom-div">
+                <tr className="row">
+                    <th className="col">
                         <AnalyzeButton />
                     </th>
 
-                    <td class="col">
+                    <td className="col">
                         <FinancialAdvise />
                     </td>
                 </tr>
