@@ -1,31 +1,34 @@
-import { useState } from "react"
-
-export default function TaxationLevelsTable() {
-    const [rows, setRows] = useState([])
-    function addRow(newTaxationLevelData) {
+export default function TaxationLevelsTable(props) {
+    function addRow() {
+        const newTaxationLevelData = {
+            taxTableRows: props.rows,
+            budget: props.newBudget,
+        }
         if (checkValidInput(newTaxationLevelData)) {
+            calculateRealPercentage(newTaxationLevelData)
+            updatePercentagesColors(newTaxationLevelData)
             const newRow = (
-                <tr key={rows.length + 1}>
+                <tr key={props.rows.length + 1}>
                     <td> 3000 </td>
                     <td> [200 - 1000] </td>
                     <td> 10 </td>
-                    <td> X </td>
+                    <td style={{ color: "red" }}> X </td>
                 </tr>
             )
-            setRows((prevTable) => [...prevTable, newRow])
+            props.setNewRow((prevTable) => [...prevTable, newRow])
         }
     }
 
     return (
         <div>
             <table className="table text-white" id="taxation-levels-table">
-                <tr>
+                <thead>
                     <th> Nº People </th>
                     <th> Income Range</th>
                     <th> Max% desired </th>
-                    <th> Real% effect </th>
-                </tr>
-                {rows}
+                    <th> Real% effect [worst case / best case] </th>
+                </thead>
+                <tbody>{props.rows}</tbody>
             </table>
             <br />
             <br />
@@ -50,3 +53,9 @@ function checkValidInput(newTaxationLevelData) {
         return false
     }
 }
+
+function calculateRealPercentage(taxLvlTableRows) {
+    return true
+}
+
+function updatePercentagesColors() {}

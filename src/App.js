@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import FTATitle from "./components/FTATitle"
 import BudgetChart from "./components/BudgetChart"
 import FinancialAdvise from "./components/FinancialAdvise"
@@ -9,6 +11,9 @@ import TaxationLevelsTable from "./components/TaxationLevelsTable"
 import CountriesDataMenu from "./components/CountriesDataMenu"
 
 export default function App() {
+    const [taxLvlTablerows, setRows] = useState([])
+    const prev_budget = 0
+    const new_budget = 0
     return (
         <div className="bg-dark bg-gradient text-white" id="app-main">
             <header className="container-md" id="page-top">
@@ -21,11 +26,15 @@ export default function App() {
                         <CountriesDataMenu />
                         <br />
                         <br />
-                        <TaxationLevelsTable />
+                        <TaxationLevelsTable
+                            rows={taxLvlTablerows}
+                            setNewRow={setRows}
+                            newBudget = {new_budget}
+                        />
                     </th>
 
                     <th className="col">
-                        <BudgetChart />
+                        <BudgetChart taxLvlRows={taxLvlTablerows} />
                         <br />
                         <br />
                         <StatParam />
