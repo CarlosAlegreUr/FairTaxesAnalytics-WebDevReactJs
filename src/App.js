@@ -54,12 +54,9 @@ export default function App() {
                             setFinancialAd={setFinancialAd}
                         />
                     </th>
-
-                    {financialAd.advise ? (
-                        <td className="col">
-                            <FinancialAdvise />
-                        </td>
-                    ) : null}
+                    <td className="col">
+                        {financialAd.advise ? <FinancialAdvise /> : null}
+                    </td>
                 </tr>
             </table>
             <PageFooter />
