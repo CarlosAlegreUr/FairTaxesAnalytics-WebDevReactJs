@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import FTATitle from "./components/FTATitle"
 import BudgetChart from "./components/BudgetChart"
@@ -17,6 +17,7 @@ export default function App() {
         buttonText: "SHOW ADVISE",
     })
     const [budget, setBudget] = useState(0)
+
     return (
         <div className="bg-dark bg-gradient text-white" id="app-main">
             <header className="container-md" id="page-top">
@@ -26,13 +27,16 @@ export default function App() {
             <table className="container-md border" id="middle-div">
                 <tr className="row align-items-center">
                     <th className="col">
-                        <CountriesDataMenu />
+                        <CountriesDataMenu
+                            setTaxLvlTableRows={setRows}
+                            setBudget={setBudget}
+                        />
                         <br />
                         <br />
                         <TaxationLevelsTable
                             rows={taxLvlTableRows}
                             setNewRow={setRows}
-                            newBudget={budget}
+                            budget={budget}
                         />
                     </th>
 
@@ -40,7 +44,7 @@ export default function App() {
                         <BudgetChart taxLvlRows={taxLvlTableRows} />
                         <br />
                         <br />
-                        <StatParam setBudget={setBudget}/>
+                        <StatParam setBudget={setBudget} />
                     </th>
                 </tr>
             </table>

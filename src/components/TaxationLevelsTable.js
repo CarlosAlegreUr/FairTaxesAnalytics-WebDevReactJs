@@ -28,7 +28,7 @@ export default function TaxationLevelsTable(props) {
     function addRow() {
         const newTaxationLevelData = {
             taxTableRows: props.rows,
-            budget: props.newBudget,
+            budget: props.budget,
         }
         if (checkValidInput(newRowData)) {
             const realPercentage = calculateRealPercentage(newTaxationLevelData)
@@ -112,6 +112,7 @@ export default function TaxationLevelsTable(props) {
 // than first one
 function checkValidInput(newRowData) {
     if (
+        newRowData.nOfPeople > 0 &&
         newRowData.maxPerDes >= 0 &&
         newRowData.maxPerDes <= 100 &&
         newRowData.incomeRange[0] >= 0
