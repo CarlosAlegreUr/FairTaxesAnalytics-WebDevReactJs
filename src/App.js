@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 import FTATitle from "./components/FTATitle"
 import BudgetChart from "./components/BudgetChart"

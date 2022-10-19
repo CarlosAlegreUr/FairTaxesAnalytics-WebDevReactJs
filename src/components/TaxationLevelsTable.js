@@ -7,6 +7,7 @@ export default function TaxationLevelsTable(props) {
         maxPerDes: 0,
     })
 
+    //TODO: be able to select some rows and delete them
     const [selectedRows, setSelectedRows] = useState([0])
 
     function manageNewRowsInputs(event) {

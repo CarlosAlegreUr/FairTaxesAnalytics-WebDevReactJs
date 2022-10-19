@@ -40,7 +40,11 @@ export default function CountriesDataMenu(props) {
 //TODO: Should be an API call that returns the needed data from an official database owned by the
 // selected country
 function getData(country) {
-    if(country != "none")
-        alert("Fetching data from " + country + "'s official goverment's site is not implemented yet.")
+    if (country != "none")
+        alert(
+            "Fetching data from " +
+                country +
+                "'s official goverment's site is not implemented yet."
+        )
     return null
 }
