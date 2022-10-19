@@ -11,13 +11,12 @@ import TaxationLevelsTable from "./components/TaxationLevelsTable"
 import CountriesDataMenu from "./components/CountriesDataMenu"
 
 export default function App() {
-    const [taxLvlTablerows, setRows] = useState([])
+    const [taxLvlTableRows, setRows] = useState([])
     const [financialAd, setFinancialAd] = useState({
         advise: false,
         buttonText: "SHOW ADVISE",
     })
-    const prev_budget = 0
-    const new_budget = 0
+    const [budget, setBudget] = useState(0)
     return (
         <div className="bg-dark bg-gradient text-white" id="app-main">
             <header className="container-md" id="page-top">
@@ -31,17 +30,17 @@ export default function App() {
                         <br />
                         <br />
                         <TaxationLevelsTable
-                            rows={taxLvlTablerows}
+                            rows={taxLvlTableRows}
                             setNewRow={setRows}
-                            newBudget={new_budget}
+                            newBudget={budget}
                         />
                     </th>
 
                     <th className="col">
-                        <BudgetChart taxLvlRows={taxLvlTablerows} />
+                        <BudgetChart taxLvlRows={taxLvlTableRows} />
                         <br />
                         <br />
-                        <StatParam />
+                        <StatParam setBudget={setBudget}/>
                     </th>
                 </tr>
             </table>
@@ -55,7 +54,7 @@ export default function App() {
                         />
                     </th>
                     <td className="col">
-                        {financialAd.advise ? <FinancialAdvise /> : null}
+                        {financialAd.advise && <FinancialAdvise />}
                     </td>
                 </tr>
             </table>

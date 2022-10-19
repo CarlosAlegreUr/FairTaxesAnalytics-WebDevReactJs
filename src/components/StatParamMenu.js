@@ -1,8 +1,12 @@
-export default function StatParamMenu() {
+export default function StatParamMenu(props) {
     return (
         <form id="stat-param">
-            Previous Budget <input type="number"></input> € <br />
-            New Budget <input type="number"></input> €
+            Budget{" "}
+            <input
+                onChange={(event) => props.setBudget(event.target.value)}
+                type="number"
+            ></input>{" "}
+            €
             <p>
                 {" "}
                 If Real% in the income levels' table is green, it means the
