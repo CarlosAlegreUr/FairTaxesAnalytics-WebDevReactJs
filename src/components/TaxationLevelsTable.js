@@ -35,9 +35,15 @@ export default function TaxationLevelsTable(props) {
             const realPercentage = calculateRealPercentage(newTaxationLevelData)
             const newRow = (
                 <tr key={props.rows.length + 1}>
-                    <td> <input type="checkbox"></input> </td>
-                    <td> {newRowData.nOfPeople} </td>
                     <td>
+                        {" "}
+                        <input type="checkbox"></input>{" "}
+                    </td>
+                    <td key={props.rows.length + 1 + "nOfPeople"}>
+                        {" "}
+                        {newRowData.nOfPeople}{" "}
+                    </td>
+                    <td key={props.rows.length + 1 + "incomeRange"}>
                         {" "}
                         {newRowData.incomeRange[0]} -{" "}
                         {newRowData.incomeRange[1]}{" "}
@@ -50,6 +56,7 @@ export default function TaxationLevelsTable(props) {
                                     ? "red"
                                     : "green",
                         }}
+                        key={props.rows.length + 1 + "realPercentage"}
                     >
                         {" "}
                         {realPercentage}{" "}

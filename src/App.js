@@ -17,7 +17,9 @@ export default function App() {
         buttonText: "SHOW ADVISE",
     })
     const [budget, setBudget] = useState(0)
+    const [yearsToShow, setYearsToShow] = useState(10)
 
+    console.log(taxLvlTableRows)
     return (
         <div className="bg-dark bg-gradient text-white" id="app-main">
             <header className="container-md" id="page-top">
@@ -41,10 +43,17 @@ export default function App() {
                     </th>
 
                     <th className="col">
-                        <BudgetChart taxLvlRows={taxLvlTableRows} />
+                        <BudgetChart
+                            taxLvlRows={taxLvlTableRows}
+                            initialBudget={budget}
+                            yearsToShow={yearsToShow}
+                        />
                         <br />
                         <br />
-                        <StatParam setBudget={setBudget} />
+                        <StatParam
+                            setBudget={setBudget}
+                            setYearsToShow={setYearsToShow}
+                        />
                     </th>
                 </tr>
             </table>

@@ -17,6 +17,7 @@ export default function StatParamMenu(props) {
             <p> Budget analysis data: </p>
             Years{" "}
             <input
+                onChange={(event) => props.setYearsToShow(event.target.value)}
                 type="number"
                 placeholder="recommended [0-15] years"
             ></input>{" "}
