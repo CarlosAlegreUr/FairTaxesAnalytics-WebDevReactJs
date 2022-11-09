@@ -35,6 +35,7 @@ export default function TaxationLevelsTable(props) {
             const realPercentage = calculateRealPercentage(newTaxationLevelData)
             const newRow = (
                 <tr key={props.rows.length + 1}>
+                    <td> <input type="checkbox"></input> </td>
                     <td> {newRowData.nOfPeople} </td>
                     <td>
                         {" "}
@@ -63,6 +64,7 @@ export default function TaxationLevelsTable(props) {
         <div>
             <table className="table text-white" id="taxation-levels-table">
                 <thead>
+                    <th> </th>
                     <th> Nº People </th>
                     <th> Income Range</th>
                     <th> Max% desired </th>
