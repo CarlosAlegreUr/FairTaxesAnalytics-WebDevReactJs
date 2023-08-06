@@ -24,7 +24,7 @@ git clone https://github.com/CarlosAlegreUr/FairTaxesAnalytics-WebDevReactJs.git
 npm start
 ```
 
-Here is an screenshot displating a part of the website:
+Here is an screenshot displaying a part of the website:
 
 <img src="websiteImage.png">
 
