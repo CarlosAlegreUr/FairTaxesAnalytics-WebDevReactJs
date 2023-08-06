@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState, useEffect } from "react"
 
 export default function TaxationLevelsTable(props) {
     const [newRowData, setNewRowData] = useState({
@@ -6,10 +6,15 @@ export default function TaxationLevelsTable(props) {
         incomeRange: [0, 0],
         maxPerDes: 0,
     })
-
+    
+    useEffect(() => {
+      console.log("Table rendered")
+    })
+    
     //TODO: be able to select some rows and delete them
     const [selectedRows, setSelectedRows] = useState([0])
 
+    // Manages diferent types of inputs a user adds when creating new row.
     function manageNewRowsInputs(event) {
         if (event.target.name != "incomeRange") {
             setNewRowData((prevInput) => {
@@ -34,16 +39,15 @@ export default function TaxationLevelsTable(props) {
         if (checkValidInput(newRowData)) {
             const realPercentage = calculateRealPercentage(newTaxationLevelData)
             const newRow = (
-                <tr key={props.rows.length + 1}>
+                <tr key={props.rows.length}>
                     <td>
                         {" "}
                         <input type="checkbox"></input>{" "}
                     </td>
-                    <td key={props.rows.length + 1 + "nOfPeople"}>
-                        {" "}
-                        {newRowData.nOfPeople}{" "}
+                    <td key={props.rows.length + "nOfPeople"}>
+                        {newRowData.nOfPeople}
                     </td>
-                    <td key={props.rows.length + 1 + "incomeRange"}>
+                    <td key={props.rows.length + "incomeRange"}>
                         {" "}
                         {newRowData.incomeRange[0]} -{" "}
                         {newRowData.incomeRange[1]}{" "}
@@ -56,7 +60,7 @@ export default function TaxationLevelsTable(props) {
                                     ? "red"
                                     : "green",
                         }}
-                        key={props.rows.length + 1 + "realPercentage"}
+                        key={props.rows.length + "realPercentage"}
                     >
                         {" "}
                         {realPercentage}{" "}
@@ -136,7 +140,23 @@ function checkValidInput(newRowData) {
 
 //TODO
 function calculateRealPercentage(newTaxationLevelData) {
-    return 23
+    if (newTaxationLevelData.taxTableRows.length != 0) {
+        const budget = newTaxationLevelData.budget
+        const nOfPeople = []
+        const incomeLvl = []
+        const maxDes = []
+        newTaxationLevelData.taxTableRows.map((col) => {
+            nOfPeople.push(col.props.children[1].props.children)
+            incomeLvl.push(col.props.children[2].props.children)
+            maxDes.push(col.props.children[3].props.children)
+        })
+        console.log(budget, "taxlvlv")
+        console.log(nOfPeople, "taxlvlv")
+        console.log(incomeLvl, "taxlvlv")
+        console.log(maxDes, "taxlvlv")
+        return 23
+    }
+    return 100
 }
 
 //TODO: make it works properly with all inputs using JS regular expresions

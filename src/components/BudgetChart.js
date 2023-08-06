@@ -1,4 +1,5 @@
 import Chart from "chart.js/auto"
+import { useEffect } from "react"
 import { Line } from "react-chartjs-2"
 
 export default function BudgetChart(props) {
@@ -16,7 +17,10 @@ export default function BudgetChart(props) {
             },
         ],
     }
-    fillData(data, props.taxTableRows)
+    fillData(data, props.taxLvlRows)
+    useEffect(() => {
+        console.log("Budget chart rendered")
+    })
     return (
         <section id="chart-section">
             <header> Budget Evolution Chart </header>
@@ -26,6 +30,14 @@ export default function BudgetChart(props) {
 }
 
 function fillData(data, taxTableRows) {
+    const nOfPeople = []
+    const incomeLvl = []
+    const maxDes = []
+    taxTableRows.map((col) => {
+        nOfPeople.push(col.props.children[1].props.children)
+        incomeLvl.push(col.props.children[2].props.children)
+        maxDes.push(col.props.children[3].props.children)
+    })
     console.log("updating data (BudgetChart.js)")
 }
 

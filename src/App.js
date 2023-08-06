@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 
 import FTATitle from "./components/FTATitle"
 import BudgetChart from "./components/BudgetChart"
@@ -12,6 +12,7 @@ import CountriesDataMenu from "./components/CountriesDataMenu"
 
 export default function App() {
     const [taxLvlTableRows, setRows] = useState([])
+
     const [financialAd, setFinancialAd] = useState({
         advise: false,
         buttonText: "SHOW ADVISE",
@@ -19,7 +20,10 @@ export default function App() {
     const [budget, setBudget] = useState(0)
     const [yearsToShow, setYearsToShow] = useState(10)
 
-    console.log(taxLvlTableRows)
+    useEffect(() => {
+        console.log("Main page rendered")
+    })
+
     return (
         <div className="bg-dark bg-gradient text-white" id="app-main">
             <header className="container-md" id="page-top">
@@ -47,7 +51,7 @@ export default function App() {
                             taxLvlRows={taxLvlTableRows}
                             initialBudget={budget}
                             yearsToShow={yearsToShow}
-                        />
+                        /> 
                         <br />
                         <br />
                         <StatParam

@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# What is this Repo for? 🤔
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository was a playground for me during my initial phase of learning front-end development with React. I used it to explore the use of APIs from the front-end, discovering how to connect and interact with various services.
 
-## Available Scripts
+Eventually, I mastered these concepts and more, concurrently developing another, more significant project in my portfolio: [BuddyFightersNft](https://github.com/CarlosAlegreUr/BuddyFighters-FullstackWeb3NFTGame). This experience laid the foundation for crafting a complex (state-wise) Single Page Application (SPA) using React.
 
-In the project directory, you can run:
+<hr/>
 
-### `npm start`
+# FTA (Fair-Taxes-Analytics) 💰
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## (IN DEVELOPMENT)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+FTA is a SPA created using React. It's designed to provide users with a tool to analyze the percentage of government spending and how it translates to costs for individuals across various taxation levels.
 
-### `npm test`
+By including API calls to fetch official government data, it ensures an accurate and reliable analysis, offering insights into the financial implications of different fiscal policies.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Use ❓
 
-### `npm run build`
+If you're curious to explore the website, you can clone the repository and start it locally by following these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone https://github.com/CarlosAlegreUr/FairTaxesAnalytics-WebDevReactJs.git
+// navigate to the directory and execute
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here is an screenshot displating a part of the website:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="websiteImage.png">
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> 🐣 **Note** 🐣: Looking back, this project stands as a charming testament to my early development days. Its simplicity and innocence reflect the growth and learning that awaited me. Who knows, maybe one day I come back and finish it. 😄

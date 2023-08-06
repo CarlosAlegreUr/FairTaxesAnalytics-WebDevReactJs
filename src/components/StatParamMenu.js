@@ -1,4 +1,12 @@
-export default function StatParamMenu(props) {
+import { useEffect } from "react"
+import { memo } from "react"
+
+export default memo(function StatParamMenu(props) {
+
+    useEffect(() => {
+        console.log("StateParam component rendered")
+    })
+
     return (
         <form id="stat-param">
             Budget{" "}
@@ -6,7 +14,7 @@ export default function StatParamMenu(props) {
                 onChange={(event) => props.setBudget(event.target.value)}
                 type="number"
             ></input>{" "}
-            €
+            €/year
             <p>
                 {" "}
                 If Real% in the income levels' table is green, it means the
@@ -32,4 +40,4 @@ export default function StatParamMenu(props) {
             <br />
         </form>
     )
-}
+})

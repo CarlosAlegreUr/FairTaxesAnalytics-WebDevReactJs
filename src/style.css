@@ -1,7 +1,8 @@
 .debt-header {
     display: flex;
     margin: 5% 49%;
-    justify-content: left;
+    justify-content: center;
+    font-weight: 550;
     font-style: italic;
     font-size: 200%;
     color: rgb(189, 26, 26);
